@@ -1,0 +1,22 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mysqlDs": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "testLoopback",
+    "password": "iamgroot",
+    "name": "mysqlDs",
+    "user": "root",
+    "connector": "mysql"
+  },
+  "container": {
+    "name": "container",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "tmp"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Invoice",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Upload": {},
+    "CsvUpload": {
+      "requiredHeaders": [
+        "InvoiceId",
+        "Amount"
+      ],
+      "validators": {
+        "InvoiceId": {
+          "required": true,
+          "type": "integer"
+        },
+        "Amount": {
+          "required": true,
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "properties": {
+    "amount": {
+      "type": "number",
+      "required": true
+    },
+    "invoiceId": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
